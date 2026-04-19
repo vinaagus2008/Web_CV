@@ -1,363 +1,644 @@
-<!doctype html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio Vina Aulia Agustin</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#project">Project</a></li>
-      </ul>
-      <a href="#contact" class="btn-contact-nav">Contact Me</a>
-    </nav>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
-    <section id="home" class="hero-section">
-      <div class="hero-content">
-        <h3>Hi I am</h3>
-        <h1>Vina Aulia Agustin</h1>
-        <p class="hero-desc">Siswa SMK Rekayasa Perangkat Lunak yang berfokus pada pengembangan aplikasi, website, dan desain digital. Sedang aktif membangun berbagai project untuk mengembangkan skill dan pengalaman.</p>
-        <a href="https://wa.me/6285763054765" target="_blank" class="btn-dark"> Hire me </a>
-      </div>
-      <div class="hero-image-container">
-        <div class="hero-img-border"></div>
-        <img src="img/me2.jpeg" alt="Vina Aulia Agustin" class="hero-img" />
-        <div class="social-icons-box">
-          <a href="https://www.tiktok.com/@vina.aulia10?_r=1&_t=ZS-95OiblEYsGj" target="_blank">
-            <img src="img/logott.png" alt="Tiktok" />
-          </a>
+html {
+  scroll-behavior: smooth;
+}
 
-          <a href="https://www.instagram.com/vnawly_a?igsh=dnZlM2JubmQ2ZTB5" target="_blank">
-            <img src="img/logoig.png" alt="Instagram" />
-          </a>
+body {
+  background-color: #97ae81;
+  color: #1b3022;
+  overflow-x: hidden;
+}
 
-          <a href="https://youtube.com/@vina-rs7xx?si=0sFuvy_TXxBSAtwi" target="_blank">
-            <img src="img/logoyt.png" alt="YouTube" />
-          </a>
-        </div>
-      </div>
-    </section>
+.section-title-container {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-    <section id="about" class="about-section">
-      <div class="section-title-container">
-        <h2 class="section-title">About me</h2>
-      </div>
+.section-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1b3022;
+  position: relative;
+  padding-bottom: 10px;
+  display: inline-block;
+}
 
-      <div class="about-main-content">
-        <div class="about-content">
-          <p class="about-p">
-            Saya siswa SMK Farmako MedikaPlus kelas 11 jurusan Rekayasa Perangkat Lunak. Saya tertarik pada pengembangan aplikasi dan website, desain grafis, serta editing video. Saat ini saya sedang memperdalam coding, problem solving,
-            dasar pemrograman, database, dan pembuatan aplikasi/web sederhana melalui proyek sekolah dan belajar mandiri.
-          </p>
-          <div class="about-btns">
-            <a href="https://wa.me/6285763054765" target="_blank" class="btn-dark"> Hire me </a>
-            <a href="cv.pdf" download target="_blank" class="btn-outline">Download CV</a>
-          </div>
-        </div>
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #1b3022;
+  border-radius: 2px;
+}
 
-        <div class="about-divider"></div>
+.title-left {
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 0;
+}
 
-        <div class="about-profile">
-          <div class="profile-circle-frame">
-            <img src="img/me.jpeg" alt="Vina Aulia Agustin" />
-          </div>
-          <h3>Vina Aulia Agustin</h3>
-          <p>Software engineering</p>
-        </div>
-      </div>
-    </section>
-    <section id="education" class="education-section">
-      <div class="section-title-container">
-        <h2 class="section-title">Education</h2>
-      </div>
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1b3022;
+  padding: 20px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-      <div class="education-wrapper">
-        <div class="edu-card">
-          <img src="img/sdLogo.png" class="edu-logo" />
-          <div class="edu-text">
-            <h3>SDN Balandongan</h3>
-            <p>2015 - 2021</p>
-          </div>
-        </div>
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+}
 
-        <div class="edu-card">
-          <img src="img/smplogo (1).png" class="edu-logo" />
-          <div class="edu-text">
-            <h3>SMPN 1 Caringin</h3>
-            <p>2021 - 2024</p>
-          </div>
-        </div>
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
 
-        <div class="edu-card">
-          <img src="img/smklogo.png" class="edu-logo" />
-          <div class="edu-text">
-            <h3>SMK Farmako Medika Plus</h3>
-            <span>Rekayasa Perangkat Lunak</span>
-            <p>2024 - Sekarang</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="skills" class="skills-section">
-      <div class="section-title-container">
-        <h2 class="section-title">Skills</h2>
-      </div>
-      <div class="skills-card-container">
-        <div class="skills-grid">
-          <div class="skill-item"><img src="img/java.webp" /><span>Java</span></div>
-          <div class="skill-item"><img src="img/canva.webp" /><span>Canva</span></div>
-          <div class="skill-item"><img src="img/flutterdart.webp" /><span>Flutter & Dart</span></div>
-          <div class="skill-item"><img src="img/botstp.webp" /><span>Bootstrap</span></div>
-          <div class="skill-item"><img src="img/figma (1).png" /><span>Figma</span></div>
-          <div class="skill-item"><img src="img/pgp2.webp" /><span>PHP</span></div>
-          <div class="skill-item"><img src="img/css.webp" /><span>CSS</span></div>
-          <div class="skill-item"><img src="img/htm.jpg" /><span>HTML</span></div>
-          <div class="skill-item"><img src="img/adobe.png" /><span>Adobe Photoshop</span></div>
-          <div class="skill-item"><img src="img/cpct.webp" /><span>CapCut</span></div>
-        </div>
-      </div>
-    </section>
+.nav-links a {
+  text-decoration: none;
+  color: #97ae81;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s;
+}
 
-    <section id="project" class="project-section">
-      <div class="section-title-container">
-        <h2 class="section-title">Project</h2>
-      </div>
+.nav-links a:hover,
+.nav-links a.active {
+  color: white;
+  font-weight: 700;
+}
 
-      <div class="slider-wrapper">
-        <div class="project-slider-container" id="projectSlider">
-          <div class="project-card">
-            <h3>Toko Bunga</h3>
-            <div class="project-img-placeholder">
-              <img src="img/projectmobile (2).png" alt="Toko Bunga" />
-            </div>
-            <button
-              class="btn-detail"
-              onclick="
-                openModal({
-                  title: 'Toko Bunga',
-                  images: ['img/projectmobile (2).png', 'img/projectmobile (3).png', 'img/projectmobile (1).png'],
-                  desc: 'Aplikasi toko CRUD+login sistem sederhana untuk pemesanan bunga secara online.',
-                  tech: 'Flutter & Dart',
-                })
-              "
-            >
-              Detail
-            </button>
-          </div>
+.btn-contact-nav {
+  background-color: white;
+  color: #1b3022;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
 
-          <div class="project-card active-card">
-            <h3>Company Profile</h3>
-            <div class="project-img-placeholder">
-              <img src="img/companyprofile(1).png" alt="Company Profile" />
-            </div>
-            <button
-              class="btn-detail"
-              onclick="
-                openModal({
-                  title: 'Company Profile',
-                  images: ['img/companyprofile(1).png', 'img/companyprofile (2).png', 'img/companyprofile (3).png'],
-                  desc: 'Website profil perusahaan yang menampilkan layanan, visi misi, dan galeri kegiatan sekolah.',
-                  tech: 'HTML, CSS',
-                })
-              "
-            >
-              Detail
-            </button>
-          </div>
+.btn-contact-nav:hover {
+  background-color: #f0f0f0;
+}
 
-          <div class="project-card">
-            <h3>Portofolio Pribadi</h3>
-            <div class="project-img-placeholder">
-              <img src="img/portofolio (2).png" alt="Portofolio" />
-            </div>
-            <button
-              class="btn-detail"
-              onclick="
-                openModal({
-                  title: 'Portofolio Pribadi',
-                  images: ['img/portofolio (2).png', 'img/portofolio (3).png', 'img/portofolio (1).png'],
-                  desc: 'Website portofolio interaktif',
-                  tech: 'HTML, CSS, Bootstrap',
-                })
-              "
-            >
-              Detail
-            </button>
-          </div>
-        </div>
-      </div>
+.btn-dark {
+  background-color: #1b3022;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background 0.3s;
+}
 
-      <div class="slider-controls">
-        <button class="slider-arrow" id="prevBtn">&#10094;</button>
-        <button class="slider-arrow" id="nextBtn">&#10095;</button>
-      </div>
-    </section>
+.btn-dark:hover {
+  background-color: #2c4a35;
+}
 
-    <div id="projectModal" class="modal">
-      <div class="modal-content">
-        <span class="close-btn" onclick="closeModal()">&times;</span>
-        <h2 id="modalTitle"></h2>
+.btn-outline {
+  background-color: transparent;
+  color: #1b3022;
+  border: 2px solid #1b3022;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 15px;
+  transition: all 0.3s;
+}
 
-        <div id="modalImagesContainer" class="modal-gallery"></div>
+.btn-outline:hover {
+  background-color: #1b3022;
+  color: white;
+}
 
-        <div class="modal-info">
-          <p id="modalDesc"></p>
-          <p id="modalTech" style="font-weight: bold; color: #1b3022; margin-top: 10px"></p>
-        </div>
-      </div>
-    </div>
+section {
+  min-height: 100vh;
+  padding: 140px 8% 80px;
+}
 
-    <section id="contact" class="contact-section">
-      <div class="section-title-container">
-        <h2 class="section-title">Contact Me</h2>
-      </div>
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
 
-      <div class="contact-container">
-        <!-- CONTACT FORM -->
-        <form class="contact-form" action="https://formspree.io/f/mvzdzepz" method="POST">
-          <!-- subject email -->
-          <input type="hidden" name="_subject" value="Pesan dari Portfolio Vina" />
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+}
 
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" required></textarea>
+.hero-content h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1b3022;
+}
 
-          <button type="submit" class="btn-dark">Send Message</button>
-        </form>
+.hero-content h1 {
+  font-size: 56px;
+  font-weight: 800;
+  color: #1b3022;
+  margin: 10px 0 20px;
+  line-height: 1.2;
+}
 
-        <!-- CONTACT INFO -->
-        <div class="contact-info">
-          <h3>Let's Collaborate</h3>
-          <p>Wujudkan ide dan proyek bersama. Saya terbuka untuk berbagai peluang kolaborasi.</p>
+.hero-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #1b3022;
+  margin-bottom: 30px;
+}
 
-          <a href="mailto:vinaauliaagustin13@gmail.com" class="info-item">
-            <i class="fas fa-envelope"></i>
-            vinaauliaagustin13@gmail.com
-          </a>
+.hero-image-container {
+  flex: 1;
+  position: relative;
+  max-width: 280px;
+  display: flex;
+  justify-content: flex-end;
+}
 
-          <a href="https://wa.me/6285763054765" target="_blank" class="info-item">
-            <i class="fas fa-phone"></i>
-            +62 857-6305-4765
-          </a>
+.hero-img {
+  width: 100%;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+}
 
-          <a href="https://instagram.com/vnawly.a" target="_blank" class="info-item">
-            <i class="fab fa-instagram"></i>
-            @vnawly.a
-          </a>
+.hero-img-border {
+  position: absolute;
+  top: 12px;
+  right: -12px;
+  width: 100%;
+  height: 100%;
+  border: 4px solid white;
+  border-radius: 12px;
+  z-index: 1;
+}
 
-          <a href="https://tiktok.com/@vinaaulia.10" target="_blank" class="info-item">
-            <i class="fab fa-tiktok"></i>
-            @vinaaulia.10
-          </a>
-        </div>
-      </div>
-    </section>
+.social-icons-box {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  background-color: white;
+  padding: 6px 10px;
+  border-radius: 20px;
+  display: flex;
+  gap: 8px;
+  z-index: 3;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
 
-    <script>
-      // --- FUNGSI MODAL ---
-      function openModal(project) {
-        const modal = document.getElementById("projectModal");
-        const container = document.getElementById("modalImagesContainer");
+.social-icons-box img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
 
-        document.getElementById("modalTitle").innerText = project.title;
-        document.getElementById("modalDesc").innerText = project.desc;
-        document.getElementById("modalTech").innerText = "Tech Stack: " + project.tech;
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 160px;
+}
 
-        container.innerHTML = ""; // Bersihkan foto lama
+.about-main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+}
 
-        project.images.forEach((src) => {
-          const img = document.createElement("img");
-          img.src = src;
-          img.className = "modal-img-item";
-          container.appendChild(img);
-        });
+.about-content {
+  flex: 1;
+  text-align: left;
+}
 
-        modal.style.display = "flex";
-      }
-      function closeModal() {
-        document.getElementById("projectModal").style.display = "none";
-      }
+.about-p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
 
-      // Tutup modal jika klik di luar area konten
-      window.onclick = function (event) {
-        const modal = document.getElementById("projectModal");
-        if (event.target == modal) {
-          closeModal();
-        }
-      };
+.about-divider {
+  width: 4px;
+  height: 300px;
+  background-color: #1b3022;
+  border-radius: 2px;
+}
 
-      // --- FUNGSI SLIDER SEDERHANA ---
-      const slider = document.getElementById("projectSlider");
-      const cards = document.querySelectorAll(".project-card");
-      const nextBtn = document.getElementById("nextBtn");
-      const prevBtn = document.getElementById("prevBtn");
+.about-profile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-      let currentIndex = 1; // Mulai dari card tengah (index 1)
+.profile-circle-frame {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 4px solid #1b3022;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-      function updateSlider() {
-        cards.forEach((card, index) => {
-          card.classList.remove("active-card");
-          if (index === currentIndex) {
-            card.classList.add("active-card");
-          }
-        });
+.profile-circle-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
-        // Geser slider agar card aktif tetap di tengah
-        const cardWidth = cards[0].offsetWidth + 30; // Lebar card + gap
-        const offset = -(currentIndex * cardWidth) + slider.parentElement.offsetWidth / 2 - cardWidth / 2;
-        slider.style.transform = `translateX(${offset}px)`;
-      }
+.about-profile h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1b3022;
+}
 
-      nextBtn.addEventListener("click", () => {
-        if (currentIndex < cards.length - 1) {
-          currentIndex++;
-          updateSlider();
-        }
-      });
+.about-profile p {
+  font-size: 16px;
+  color: #1b3022;
+}
 
-      prevBtn.addEventListener("click", () => {
-        if (currentIndex > 0) {
-          currentIndex--;
-          updateSlider();
-        }
-      });
+.education-wrapper {
+  background: #a8b895;
+  padding: 50px;
+  border-radius: 40px;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
-      // --- SCRIPT NAVBAR AUTO BOLD SAAT SCROLL ---
-      window.addEventListener("scroll", function () {
-        const sections = document.querySelectorAll("section");
-        const navLinks = document.querySelectorAll(".nav-links a");
+.edu-card {
+  background: #dcdcdc;
+  border-radius: 25px;
+  padding: 25px 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
 
-        let current = "";
+.edu-logo {
+  width: 80px;
+  height: auto;
+}
 
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
+.edu-text {
+  flex: 1;
+}
 
-          // Cek posisi scroll (dikurangi sedikit agar perpindahan lebih smooth)
-          if (window.scrollY >= sectionTop - sectionHeight / 3) {
-            current = section.getAttribute("id");
-          }
-        });
+.edu-text h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
 
-        navLinks.forEach((link) => {
-          link.classList.remove("active"); // Hapus semua status aktif dulu
+.edu-text span {
+  font-size: 14px;
+  display: block;
+}
 
-          // Jika href link (misal #project) sama dengan id section yang aktif
-          if (link.getAttribute("href").includes(current)) {
-            link.classList.add("active"); // Tambahkan class active
-          }
-        });
-      });
+.edu-text p {
+  font-size: 15px;
+}
 
-      // Jalankan saat pertama kali load
-      window.addEventListener("load", updateSlider);
-    </script>
-  </body>
-</html>
+.skills-card-container {
+  background-color: #6b7e5a;
+  padding: 60px 50px;
+  border-radius: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 25px;
+}
+
+.skill-item {
+  background-color: white;
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-item img {
+  height: 50px;
+  margin-bottom: 12px;
+}
+
+.skill-item span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1b3022;
+}
+
+.project-section {
+  text-align: center;
+  overflow: visible;
+}
+
+.slider-wrapper {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.project-slider-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.project-card {
+  background-color: white;
+  padding: 35px;
+  border-radius: 35px;
+  text-align: center;
+  width: 360px;
+  flex-shrink: 0;
+  transition: all 0.4s ease;
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.project-card.active-card {
+  opacity: 1;
+  transform: scale(1.08);
+  z-index: 2;
+}
+
+.project-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1b3022;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #1b3022;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.project-img-placeholder {
+  width: 100%;
+  height: 200px;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.project-img-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-detail {
+  background-color: #1b3022;
+  color: white;
+  padding: 10px 35px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.slider-controls {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.slider-arrow {
+  background-color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.slider-arrow:hover {
+  background-color: #ddd;
+}
+
+.contact-section {
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  gap: 60px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px solid #1b3022;
+  background-color: white;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  margin: 8px 0;
+}
+
+.info-item:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .hero-section,
+  .about-section,
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-content,
+  .hero-image-container,
+  .contact-container {
+    max-width: 100%;
+  }
+  .hero-image-container {
+    justify-content: center;
+  }
+  .nav-links {
+    display: none;
+  }
+  .project-slider-container {
+    flex-direction: column;
+  }
+  .project-card {
+    width: 100%;
+    opacity: 1;
+    transform: scale(1);
+  }
+  .project-card.active-card {
+    transform: scale(1);
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 25px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.modal-img-item {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  object-fit: cover;
+}
+
+.modal-info {
+  text-align: left;
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  z-index: 10;
+}
+
+#modalImg {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f4f4f4;
+}
+
+.modal-gallery::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modal-gallery::-webkit-scrollbar-thumb {
+  background: #1b3022;
+  border-radius: 10px;
+}
